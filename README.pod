@@ -1,6 +1,6 @@
 =head1 Flash Policy Server
 
-Usage: perl flash-policy-server.pl [options]
+=head4 Usage: perl flash-policy-server.pl [options]
 
   --disable-log    Disable logging
   --help|-?        Show this help
