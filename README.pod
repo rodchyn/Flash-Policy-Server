@@ -1,6 +1,20 @@
 =head1 Flash Policy Server
 
-=head4 Usage: perl flash-policy-server.pl [options]
+
+Flash Player 9 (version 9.0.124.0 and above) implements a strict new access 
+policy for Flash applications (such as chat clients or games) that make 
+Socket or XMLSocket connections to a remote host. It now requires the presence 
+of a socket policy file on the server. (This means you need to have control of 
+the server in order to implement these changes. If you've written a flash app 
+that makes a connection to a server you don't own, you're out of luck, unless 
+that server sets up their own socket policy.)
+
+In earlier versions of Flash Player, if the server didn't have a socket policy, 
+your Flash application could still connect. Now if there's no policy, 
+your application will not connect.
+
+
+=head3 Usage: perl flash-policy-server.pl [options]
 
   --disable-log    Disable logging
   --help|-?        Show this help
